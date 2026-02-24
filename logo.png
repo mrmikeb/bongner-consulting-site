@@ -1,0 +1,15 @@
+
+(function(){
+  const nav=document.querySelector('header .nav');
+  const btn=document.querySelector('#navToggle');
+  if(btn){btn.addEventListener('click',()=>nav.classList.toggle('open'));}
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',function(e){
+      const id=this.getAttribute('href');
+      if(id.length>1){
+        const el=document.querySelector(id);
+        if(el){e.preventDefault();const y=el.getBoundingClientRect().top+window.pageYOffset-72;window.scrollTo({top:y,behavior:'smooth'});nav.classList.remove('open');}
+      }
+    });
+  });
+})();
