@@ -1,39 +1,43 @@
 (function () {
-  const nav = document.querySelector('header .nav');
-  const btn = document.querySelector('#navToggle');
+  const nav = document.querySelector("#primaryNav");
+  const btn = document.querySelector("#navToggle");
 
   if (btn && nav) {
-    btn.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    btn.addEventListener("click", function () {
+      const isOpen = nav.classList.toggle("open");
+
+      btn.setAttribute("aria-expanded", String(isOpen));
+      btn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     });
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener('click', function (e) {
-      const id = this.getAttribute('href');
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      const id = link.getAttribute("href");
 
-      if (id && id.length > 1) {
-        const el = document.querySelector(id);
+      if (!id || id === "#") return;
 
-        if (el) {
-          e.preventDefault();
+      const target = document.querySelector(id);
 
-          const y = el.getBoundingClientRect().top + window.pageYOffset - 72;
+      if (!target) return;
 
-          window.scrollTo({
-            top: y,
-            behavior: 'smooth'
-          });
+      e.preventDefault();
 
-          if (nav) nav.classList.remove('open');
+      const offset = 72;
+      const y = target.getBoundingClientRect().top + window.scrollY - offset;
 
-          if (btn) {
-            btn.setAttribute('aria-expanded', 'false');
-            btn.setAttribute('aria-label', 'Open menu');
-          }
-        }
+      window.scrollTo({
+        top: y,
+        behavior: "smooth"
+      });
+
+      if (nav) {
+        nav.classList.remove("open");
+      }
+
+      if (btn) {
+        btn.setAttribute("aria-expanded", "false");
+        btn.setAttribute("aria-label", "Open menu");
       }
     });
   });
