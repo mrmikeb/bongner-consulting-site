@@ -3,349 +3,447 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bongner Consulting Services | Overhead Crane Consulting</title>
+  <meta name="description" content="Vendor-neutral overhead crane consulting, material handling specifications, failure analysis, and expert witness services." />
 
-  <title>Bongner Consulting Services | Overhead Material Handling & Expert Witness</title>
+  <style>
+    :root {
+      --navy: #0b1f33;
+      --steel: #1f3b52;
+      --orange: #f4a51c;
+      --gray: #eef2f5;
+      --dark: #1d252c;
+      --white: #ffffff;
+    }
 
-  <meta
-    name="description"
-    content="Independent, vendor-neutral consulting for overhead material handling equipment selection, specifications, expert witness work, and failure analysis for overhead crane incidents."
-  />
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <!-- removed non-existent /assets/img/favicon.png -->
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background: var(--white);
+    }
 
-  <meta property="og:title" content="Bongner Consulting Services" />
-  <meta
-    property="og:description"
-    content="Independent, vendor-neutral consulting for overhead material handling and expert witness services."
-  />
-  <meta property="og:image" content="/logo.png" />
+    header {
+      background: var(--navy);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,.25);
+    }
 
-  <meta name="theme-color" content="#124a6b" />
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  <link rel="preload" href="/logo.png" as="image" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .logo span {
+      color: var(--orange);
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 22px;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    .hero {
+      min-height: 78vh;
+      background:
+        linear-gradient(rgba(11,31,51,.88), rgba(11,31,51,.88)),
+        url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 1180px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 1.05;
+      max-width: 850px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 760px;
+      margin-bottom: 32px;
+      color: #dce6ee;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--navy);
+    }
+
+    .btn-secondary {
+      border: 2px solid var(--white);
+      color: var(--white);
+    }
+
+    section {
+      padding: 80px 24px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 28px;
+      border-radius: 10px;
+      border-top: 5px solid var(--orange);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .dark-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .dark-section h2,
+    .dark-section h3 {
+      color: var(--white);
+    }
+
+    .dark-section p,
+    .dark-section li {
+      color: #dce6ee;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .process {
+      background: var(--gray);
+    }
+
+    .industries {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tag {
+      background: var(--steel);
+      color: var(--white);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .contact {
+      background: var(--steel);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+    }
+
+    .contact a {
+      color: var(--orange);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #071522;
+      color: #cfd8df;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 850px) {
+      .nav {
+        display: block;
+      }
+
+      nav {
+        margin-top: 14px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px 14px 0 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#home" aria-label="Bongner Consulting Services home">
-        <img src="/logo.png" alt="Bongner Consulting Services logo" />
-        <strong>Bongner Consulting Services</strong>
-      </a>
+<header>
+  <div class="nav">
+    <div class="logo">Bongner <span>Consulting</span> Services</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#expert">Expert Witness</a>
+      <a href="#process">Process</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <button
-        id="navToggle"
-        class="toggle"
-        type="button"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="primaryNav"
-      >
-        Menu
-      </button>
-
-      <nav id="primaryNav" class="links" aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#industries">Industries</a>
-        <a href="#expert">Expert Witness</a>
-        <a href="#about">About</a>
-        <a href="#credentials">Credentials</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Vendor-Neutral • Application-Driven • Safety-Focused</div>
+    <h1>Overhead Crane Consulting & Failure Analysis</h1>
+    <p>
+      Independent consulting for overhead material handling systems, crane specifications,
+      vendor evaluation, compliance support, and expert witness analysis.
+    </p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#contact">Request a Consultation</a>
+      <a class="btn btn-secondary" href="#expert">Expert Witness Services</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main id="main">
-    <section class="hero" id="home">
-      <div class="container">
-        <figure class="logo-wrap">
-          <img src="/logo.png" alt="Bongner Consulting Services logo" />
-          <figcaption class="kicker">
-            Vendor-Neutral • Application-Driven • Safety-Focused
-          </figcaption>
-        </figure>
+<section id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Industrial Consulting Built on Real Crane Experience</h2>
+      <p>Practical support for companies selecting, evaluating, installing, or improving overhead material handling equipment.</p>
+    </div>
 
-        <h1>Overhead Material Handling & Crane Failure Analysis</h1>
-
-        <p class="lead">
-          Bongner Consulting Services helps organizations specify and procure the right
-          overhead material handling solution for their application — and provides factual,
-          engineering-minded analysis as an <strong>expert witness</strong> when crane failures occur.
-        </p>
-
-        <div class="cta">
-          <a class="button" href="#contact">Request a consultation</a>
-          <a class="button secondary" href="#expert">Learn about expert witness work</a>
-        </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Requirements Definition</h3>
+        <p>Duty cycle, load profiles, span, headroom, clearances, controls, environment, and integration planning.</p>
       </div>
-    </section>
 
-    <section class="section" id="services">
-      <div class="container">
-        <div class="kicker">What we do</div>
-        <h2>Independent consulting to get the best-fit overhead equipment</h2>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Requirements & Application Definition</h3>
-            <p>
-              Document duty cycle, load profiles, headroom, span, clearances, environment,
-              controls, and integration points to avoid over- or under-specifying.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Specifications & Drawings Review</h3>
-            <p>
-              Develop or review technical specs, layouts, runway and structure considerations,
-              and interface details to align with performance and budget.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Vendor Sourcing & Evaluation</h3>
-            <p>
-              RFP/RFQ preparation, objective bid comparisons, lifecycle cost analysis,
-              and reference checks — manufacturer-agnostic.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Compliance & Risk</h3>
-            <p>
-              Align designs and procedures with applicable standards and good practices,
-              including OSHA 1910.179, ASME B30 series, and CMAA.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Implementation Support</h3>
-            <p>
-              Vendor coordination, FAT/SAT checklists, installation oversight, testing,
-              and acceptance criteria to ensure systems operate as intended.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Training & Lifecycle</h3>
-            <p>
-              Operator and maintenance awareness, inspection planning, spare parts strategy,
-              and upgrade paths for reliability and uptime.
-            </p>
-          </article>
-        </div>
+      <div class="card">
+        <h3>Specifications Review</h3>
+        <p>Technical specs, layouts, runway considerations, acceptance criteria, and vendor-neutral recommendations.</p>
       </div>
-    </section>
 
-    <section class="section" id="expert">
-      <div class="container">
-        <div class="kicker">Legal support</div>
-        <h2>Expert witness & failure analysis for overhead cranes</h2>
+      <div class="card">
+        <h3>Vendor Evaluation</h3>
+        <p>RFQ/RFP support, bid comparisons, lifecycle cost analysis, scope review, and reference checks.</p>
+      </div>
 
-        <p>
-          For attorneys and insurers, Bongner Consulting Services delivers clear,
-          factual analysis of overhead crane incidents and component failures.
-        </p>
+      <div class="card">
+        <h3>Compliance & Risk</h3>
+        <p>Support aligned with OSHA, ASME B30, CMAA, NEC, and industry good practices.</p>
+      </div>
 
-        <ul class="list">
-          <li>Evidence review including designs, maintenance records, inspection records, photos, and video</li>
-          <li>Site inspections and documentation protocols</li>
-          <li>Root cause and contributing factor analysis</li>
-          <li>Standards and conformance assessment</li>
-          <li>Technical reports, demonstratives, and testimony preparation</li>
+      <div class="card">
+        <h3>Implementation Support</h3>
+        <p>Installation oversight, FAT/SAT checklists, testing support, punch-list review, and safe handover.</p>
+      </div>
+
+      <div class="card">
+        <h3>Training & Lifecycle</h3>
+        <p>Operator awareness, inspection planning, maintenance strategy, spare parts, upgrades, and reliability support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expert" class="dark-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Expert Witness & Crane Failure Analysis</h2>
+      <p>Clear, factual, engineering-minded support for attorneys, insurers, and organizations involved in overhead crane incidents.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Evidence Review</h3>
+        <p>Designs, maintenance records, inspection records, photos, video, and available documentation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Root Cause Analysis</h3>
+        <p>Technical review of contributing factors, component failure, operating conditions, and standards conformance.</p>
+      </div>
+
+      <div class="card">
+        <h3>Reports & Testimony</h3>
+        <p>Technical reports, demonstratives, deposition preparation, and testimony support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="process">
+  <div class="container">
+    <div class="section-title">
+      <h2>A Clear, Practical Process</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card"><h3>1. Discovery</h3><p>Clarify goals, constraints, stakeholders, and success criteria.</p></div>
+      <div class="card"><h3>2. Requirements</h3><p>Define loads, cycles, geometry, environment, controls, and safety needs.</p></div>
+      <div class="card"><h3>3. Specifications</h3><p>Create or review specs, drawings, and acceptance tests.</p></div>
+      <div class="card"><h3>4. Sourcing</h3><p>Prepare RFQs, compare bids, and evaluate lifecycle cost.</p></div>
+      <div class="card"><h3>5. Implementation</h3><p>Support installation, testing, and punch-list completion.</p></div>
+      <div class="card"><h3>6. Support</h3><p>Assist with training, inspection planning, and long-term reliability.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Industries Served</h2>
+      <p>Support for heavy industrial, manufacturing, warehousing, and specialty material handling environments.</p>
+    </div>
+
+    <div class="industries">
+      <span class="tag">Manufacturing</span>
+      <span class="tag">Steel & Metals</span>
+      <span class="tag">Warehousing</span>
+      <span class="tag">Energy</span>
+      <span class="tag">Ports</span>
+      <span class="tag">Heavy Equipment</span>
+      <span class="tag">Aerospace</span>
+      <span class="tag">Automotive</span>
+    </div>
+  </div>
+</section>
+
+<section id="credentials" class="dark-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Credentials & Experience</h2>
+      <p>37+ years of hands-on overhead crane repair, inspection, modernization, installation, management, operation, and training experience.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Technical Background</h3>
+        <ul>
+          <li>Mechanical, electrical, and structural crane components</li>
+          <li>Crane inspection and modernization</li>
+          <li>Installation, operation, and training</li>
         </ul>
-
-        <p class="small">
-          Disclaimer: Consulting and expert witness services provide technical opinions
-          and do not constitute legal advice.
-        </p>
       </div>
-    </section>
 
-    <section class="section" id="process">
-      <div class="container">
-        <div class="kicker">How we work</div>
-        <h2>Practical, transparent engagement model</h2>
-
-        <div class="cards">
-          <article class="card">
-            <h3>1) Discovery</h3>
-            <p>Clarify objectives, constraints, stakeholders, and success criteria.</p>
-          </article>
-
-          <article class="card">
-            <h3>2) Requirements</h3>
-            <p>Quantify loads, cycles, geometry, environment, controls, and safety needs.</p>
-          </article>
-
-          <article class="card">
-            <h3>3) Specifications</h3>
-            <p>Develop vendor-neutral specs and drawings; align on acceptance tests.</p>
-          </article>
-
-          <article class="card">
-            <h3>4) Sourcing</h3>
-            <p>Prepare RFQs, evaluate bids, negotiate scope, and assess lifecycle cost.</p>
-          </article>
-
-          <article class="card">
-            <h3>5) Implementation</h3>
-            <p>Oversee installation, testing, and punch-list items through safe handover.</p>
-          </article>
-
-          <article class="card">
-            <h3>6) Support</h3>
-            <p>Post-install review, training, and inspection or maintenance planning.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="industries">
-      <div class="container">
-        <div class="kicker">Where we help</div>
-        <h2>Representative industries & applications</h2>
-
-        <p class="small">Examples include, but are not limited to:</p>
-
-        <p>
-          <span class="badge">Manufacturing</span>
-          <span class="badge">Steel & Metals</span>
-          <span class="badge">Warehousing</span>
-          <span class="badge">Energy</span>
-          <span class="badge">Ports</span>
-          <span class="badge">Heavy Equipment</span>
-          <span class="badge">Aerospace</span>
-          <span class="badge">Automotive</span>
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container">
-        <div class="kicker">About</div>
-        <h2>Bongner Consulting Services</h2>
-
-        <p>
-          Bongner Consulting Services is an independent consultancy focused on overhead
-          material handling systems and cranes. We emphasize application-driven
-          specifications, safety, and total lifecycle value.
-        </p>
-
-        <div class="quote">
-          Vendor-neutral perspective means the solution is chosen for your application —
-          not the other way around.
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="credentials">
-      <div class="container">
-        <div class="kicker">Credentials & Training</div>
-        <h2>Professional Credentials, Training & Industry Roles</h2>
-
-        <ul class="list">
-          <li>37+ years of overhead crane repair, inspection, modernization, installation, management, operation, and training experience</li>
-          <li>Hands-on expertise across mechanical, electrical, and structural crane components</li>
-          <li>ASME B30 Committee Member — Subcommittees B30.2 and B30.17</li>
-          <li>Standards and codes: OSHA 1910, OSHA 1926, CMAA, NFPA 70, NEC, and ASTM</li>
+      <div class="card">
+        <h3>Standards Knowledge</h3>
+        <ul>
+          <li>ASME B30 Committee Member</li>
+          <li>OSHA 1910 and OSHA 1926</li>
+          <li>CMAA, NFPA 70, NEC, and ASTM</li>
         </ul>
+      </div>
 
+      <div class="card">
         <h3>Industry Training</h3>
-
-        <ul class="list">
-          <li>Electrician's Mate “A” School; Naval Nuclear Power School</li>
-          <li>P&amp;H Institute Crane Inspector Training</li>
-          <li>Cutler Hammer Logic Control School; Solid-State Controls</li>
-          <li>3M Leadership, Management &amp; Training School</li>
-          <li>Rigid Lifeline Fall Protection Specialist &amp; Competent Person</li>
-          <li>Manufacturer training: Yale, Shaw-Box, Coffing, Chester, Budgit, Harrington, Spanco, Gorbel, and Magnetek</li>
-          <li>Vibration Analysis Level I &amp; II</li>
-          <li>Ludeca-Optalign Laser Shaft Alignment</li>
+        <ul>
+          <li>P&H Crane Inspector Training</li>
+          <li>Naval Nuclear Power School</li>
+          <li>Fall protection and vibration analysis training</li>
         </ul>
-
-        <h3>Awards & Commendations</h3>
-
-        <ul class="list">
-          <li>Meritorious Unit Commendation, US Navy — Two Awards</li>
-          <li>Admiral Flatley Memorial Award — Two Awards</li>
-          <li>Good Conduct Medal</li>
-          <li>Sea Service Deployment Ribbon — Four Awards</li>
-          <li>Armed Forces Expeditionary Medal</li>
-          <li>Servant to Youth Award, Boy Scouts of America</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="kicker">Get in touch</div>
-        <h2>Request a consultation</h2>
-
-        <p>
-          Send an email with your objectives, timeline, and any drawings or specifications
-          you can share. We respond within two business days.
-        </p>
-
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:mrmikeb@charter.net">mrmikeb@charter.net</a><br />
-          <strong>Phone:</strong>
-          <a href="tel:+16185788023">618-578-8023</a>
-        </p>
-
-        <p class="small">
-          Prefer a form? Connect this site to a service like Formspree or use your firm’s intake system.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div>
-        &copy; <span id="year"></span> Bongner Consulting Services. All rights reserved.
-      </div>
-      <div class="small">
-        This website provides general technical information only. Always follow applicable laws,
-        standards, and safety procedures.
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="/assets/js/app.js"></script>
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Request a Consultation</h2>
+    <p>Email your objectives, timeline, drawings, specifications, or incident details.</p>
+    <p><strong>Email:</strong> <a href="mailto:mrmikeb@charter.net">mrmikeb@charter.net</a></p>
+    <p><strong>Phone:</strong> <a href="tel:16185788023">618-578-8023</a></p>
+  </div>
+</section>
 
-  <script>
-    const yearElement = document.getElementById("year");
+<footer>
+  <p>© 2026 Bongner Consulting Services. All rights reserved.</p>
+  <p>This website provides general technical information only. Always follow applicable laws, standards, and safety procedures.</p>
+</footer>
 
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Bongner Consulting Services",
-      "url": "https://bongnerconsulting.com",
-      "logo": "https://bongnerconsulting.com/logo.png",
-      "image": "https://bongnerconsulting.com/logo.png",
-      "areaServed": "US",
-      "description": "Independent consulting for overhead material handling equipment selection and expert witness services for overhead crane failures.",
-      "email": "mrmikeb@charter.net",
-      "telephone": "+16185788023",
-      "serviceType": [
-        "Overhead material handling consulting",
-        "Overhead crane expert witness",
-        "Failure analysis"
-      ]
-    }
-  </script>
 </body>
 </html>
