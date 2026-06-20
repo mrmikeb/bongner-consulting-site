@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bongner Consulting Services | Overhead Crane Consulting</title>
-  <meta name="description" content="Vendor-neutral overhead crane consulting, material handling specifications, failure analysis, and expert witness services." />
 
   <style>
     :root {
-      --navy: #0b1f33;
-      --steel: #1f3b52;
-      --orange: #f4a51c;
-      --gray: #eef2f5;
-      --dark: #1d252c;
+      --ink: #101820;
+      --navy: #14213d;
+      --steel: #5f6f7e;
+      --light: #f6f7f9;
       --white: #ffffff;
+      --gold: #c9a24d;
+      --line: #d9dee5;
     }
 
     * {
@@ -23,90 +23,91 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      line-height: 1.6;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
       background: var(--white);
+      line-height: 1.65;
     }
 
     header {
-      background: var(--navy);
-      color: var(--white);
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,.25);
+      z-index: 100;
+      backdrop-filter: blur(12px);
     }
 
     .nav {
       max-width: 1180px;
       margin: auto;
-      padding: 18px 24px;
+      padding: 22px 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .logo {
-      font-size: 1.2rem;
+    .brand {
+      font-size: 1.05rem;
       font-weight: 800;
-      letter-spacing: .5px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--navy);
     }
 
-    .logo span {
-      color: var(--orange);
+    .brand span {
+      color: var(--gold);
     }
 
     nav a {
-      color: var(--white);
       text-decoration: none;
-      margin-left: 22px;
-      font-weight: 600;
-      font-size: .95rem;
+      color: var(--ink);
+      margin-left: 28px;
+      font-size: .9rem;
+      font-weight: 650;
     }
 
     nav a:hover {
-      color: var(--orange);
+      color: var(--gold);
     }
 
     .hero {
-      min-height: 78vh;
       background:
-        linear-gradient(rgba(11,31,51,.88), rgba(11,31,51,.88)),
-        url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80");
+        linear-gradient(90deg, rgba(16,24,32,.95), rgba(20,33,61,.88)),
+        url("https://images.unsplash.com/photo-1581093458791-9d42cc6f9f56?auto=format&fit=crop&w=1600&q=80");
       background-size: cover;
       background-position: center;
       color: var(--white);
-      display: flex;
-      align-items: center;
+      padding: 120px 28px;
     }
 
-    .hero-content {
+    .hero-inner {
       max-width: 1180px;
       margin: auto;
-      padding: 80px 24px;
     }
 
     .eyebrow {
-      color: var(--orange);
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      color: var(--gold);
       font-weight: 800;
-      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      margin-bottom: 20px;
+      font-size: .85rem;
     }
 
     h1 {
-      font-size: clamp(2.4rem, 6vw, 5rem);
-      line-height: 1.05;
       max-width: 850px;
-      margin-bottom: 24px;
+      font-size: clamp(2.6rem, 6vw, 5.4rem);
+      line-height: 1.02;
+      letter-spacing: -.04em;
+      margin-bottom: 26px;
     }
 
     .hero p {
-      font-size: 1.25rem;
-      max-width: 760px;
-      margin-bottom: 32px;
-      color: var(--white);
+      max-width: 720px;
+      font-size: 1.22rem;
+      color: #e8edf2;
+      margin-bottom: 38px;
     }
 
     .buttons {
@@ -116,25 +117,25 @@
     }
 
     .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 4px;
+      padding: 15px 24px;
+      border-radius: 2px;
       text-decoration: none;
       font-weight: 800;
+      letter-spacing: .02em;
     }
 
     .btn-primary {
-      background: var(--orange);
-      color: var(--navy);
+      background: var(--gold);
+      color: var(--ink);
     }
 
     .btn-secondary {
-      border: 2px solid var(--white);
+      border: 1px solid rgba(255,255,255,.65);
       color: var(--white);
     }
 
     section {
-      padding: 80px 24px;
+      padding: 92px 28px;
     }
 
     .container {
@@ -142,120 +143,132 @@
       margin: auto;
     }
 
-    .section-title {
-      max-width: 760px;
-      margin-bottom: 42px;
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 50px;
+      margin-bottom: 48px;
+      align-items: start;
     }
 
-    .section-title h2 {
-      font-size: 2.2rem;
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.08;
       color: var(--navy);
-      margin-bottom: 12px;
+      letter-spacing: -.03em;
     }
 
-    .dark-section .section-title h2 {
-      color: var(--white);
-    }
-
-    .dark-section .section-title p {
-      color: var(--white);
+    .section-heading p {
+      color: #4e5965;
+      font-size: 1.08rem;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
     .card {
       background: var(--white);
-      padding: 28px;
-      border-radius: 10px;
-      border-top: 5px solid var(--orange);
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
-      color: var(--dark);
+      border: 1px solid var(--line);
+      padding: 34px;
+      min-height: 230px;
+      box-shadow: 0 18px 45px rgba(16,24,32,.06);
+    }
+
+    .card-number {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: .85rem;
+      letter-spacing: .16em;
+      margin-bottom: 18px;
+      text-transform: uppercase;
     }
 
     .card h3 {
       color: var(--navy);
-      margin-bottom: 10px;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
     }
 
     .card p,
     .card li {
-      color: var(--dark);
+      color: #485360;
+      font-size: .98rem;
     }
 
-    .dark-section {
-      background: var(--navy);
+    .dark {
+      background: var(--ink);
       color: var(--white);
     }
 
-    .dark-section h2,
-    .dark-section h3 {
+    .dark .section-heading h2,
+    .dark .card h3 {
       color: var(--white);
     }
 
-    .dark-section p,
-    .dark-section li {
-      color: var(--white);
+    .dark .section-heading p {
+      color: #cbd3dc;
+    }
+
+    .dark .card {
+      background: #151f2a;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: none;
+    }
+
+    .dark .card p,
+    .dark .card li {
+      color: #f4f6f8;
       font-weight: 500;
     }
 
+    .light {
+      background: var(--light);
+    }
+
     ul {
-      padding-left: 20px;
+      padding-left: 18px;
     }
 
-    .process {
-      background: var(--gray);
-    }
-
-    .industries {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .tag {
-      background: var(--steel);
-      color: var(--white);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 700;
+    li {
+      margin-bottom: 8px;
     }
 
     .contact {
-      background: var(--steel);
+      background: var(--navy);
       color: var(--white);
       text-align: center;
     }
 
     .contact h2 {
-      font-size: 2.4rem;
-      margin-bottom: 16px;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      margin-bottom: 18px;
+      letter-spacing: -.04em;
+    }
+
+    .contact p {
+      color: #dbe3ec;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
     }
 
     .contact a {
-      color: var(--orange);
+      color: var(--gold);
       font-weight: 800;
       text-decoration: none;
     }
 
     footer {
-      background: #071522;
-      color: #cfd8df;
+      background: #0b1118;
+      color: #aeb8c2;
       text-align: center;
-      padding: 28px 20px;
+      padding: 30px;
       font-size: .9rem;
     }
 
-    @media (max-width: 1024px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
       .nav {
         display: block;
       }
@@ -266,15 +279,16 @@
 
       nav a {
         display: inline-block;
-        margin: 8px 14px 0 0;
+        margin: 8px 18px 0 0;
       }
 
+      .section-heading,
       .grid {
         grid-template-columns: 1fr;
       }
 
-      section {
-        padding: 60px 20px;
+      .hero {
+        padding: 90px 24px;
       }
     }
   </style>
@@ -284,7 +298,7 @@
 
 <header>
   <div class="nav">
-    <div class="logo">Bongner <span>Consulting</span> Services</div>
+    <div class="brand">Bongner <span>Consulting</span></div>
     <nav>
       <a href="#services">Services</a>
       <a href="#expert">Expert Witness</a>
@@ -296,152 +310,149 @@
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <div class="eyebrow">Vendor-Neutral • Application-Driven • Safety-Focused</div>
-    <h1>Overhead Crane Consulting & Failure Analysis</h1>
+  <div class="hero-inner">
+    <div class="eyebrow">Overhead Crane Consulting</div>
+    <h1>Independent expertise for complex material handling decisions.</h1>
     <p>
-      Independent consulting for overhead material handling systems, crane specifications,
-      vendor evaluation, compliance support, and expert witness analysis.
+      Vendor-neutral consulting, overhead crane specifications, safety-focused evaluations,
+      failure analysis, and expert witness support.
     </p>
     <div class="buttons">
-      <a class="btn btn-primary" href="#contact">Request a Consultation</a>
-      <a class="btn btn-secondary" href="#expert">Expert Witness Services</a>
+      <a class="btn btn-primary" href="#contact">Request Consultation</a>
+      <a class="btn btn-secondary" href="#services">View Services</a>
     </div>
   </div>
 </section>
 
 <section id="services">
   <div class="container">
-    <div class="section-title">
-      <h2>Industrial Consulting Built on Real Crane Experience</h2>
-      <p>Practical support for companies selecting, evaluating, installing, or improving overhead material handling equipment.</p>
+    <div class="section-heading">
+      <h2>Practical consulting for high-stakes crane systems.</h2>
+      <p>
+        Bongner Consulting Services helps organizations make better decisions when selecting,
+        evaluating, modernizing, or investigating overhead material handling equipment.
+      </p>
     </div>
 
     <div class="grid">
       <div class="card">
-        <h3>Requirements Definition</h3>
-        <p>Duty cycle, load profiles, span, headroom, clearances, controls, environment, and integration planning.</p>
+        <div class="card-number">01</div>
+        <h3>Crane Specifications</h3>
+        <p>Application-driven requirements, technical specifications, duty cycle review, and equipment recommendations.</p>
       </div>
 
       <div class="card">
-        <h3>Specifications Review</h3>
-        <p>Technical specs, layouts, runway considerations, acceptance criteria, and vendor-neutral recommendations.</p>
-      </div>
-
-      <div class="card">
+        <div class="card-number">02</div>
         <h3>Vendor Evaluation</h3>
-        <p>RFQ/RFP support, bid comparisons, lifecycle cost analysis, scope review, and reference checks.</p>
+        <p>Independent review of proposals, layouts, scope, pricing, lifecycle cost, and vendor capabilities.</p>
       </div>
 
       <div class="card">
-        <h3>Compliance & Risk</h3>
-        <p>Support aligned with OSHA, ASME B30, CMAA, NEC, and industry good practices.</p>
-      </div>
-
-      <div class="card">
-        <h3>Implementation Support</h3>
-        <p>Installation oversight, FAT/SAT checklists, testing support, punch-list review, and safe handover.</p>
-      </div>
-
-      <div class="card">
-        <h3>Training & Lifecycle</h3>
-        <p>Operator awareness, inspection planning, maintenance strategy, spare parts, upgrades, and reliability support.</p>
+        <div class="card-number">03</div>
+        <h3>Safety & Compliance</h3>
+        <p>Support related to OSHA, ASME B30, CMAA, NEC, inspections, maintenance, and safe operation.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="expert" class="dark-section">
+<section id="expert" class="dark">
   <div class="container">
-    <div class="section-title">
-      <h2>Expert Witness & Crane Failure Analysis</h2>
-      <p>Clear, factual, engineering-minded support for attorneys, insurers, and organizations involved in overhead crane incidents.</p>
+    <div class="section-heading">
+      <h2>Expert witness and failure analysis support.</h2>
+      <p>
+        Clear, factual, technically grounded analysis for attorneys, insurers, companies,
+        and organizations involved in overhead crane incidents.
+      </p>
     </div>
 
     <div class="grid">
       <div class="card">
-        <h3>Evidence Review</h3>
-        <p>Designs, maintenance records, inspection records, photos, video, and available documentation.</p>
+        <div class="card-number">Review</div>
+        <h3>Document & Evidence Review</h3>
+        <p>Maintenance records, inspection reports, photos, video, drawings, specifications, and available documentation.</p>
       </div>
 
       <div class="card">
+        <div class="card-number">Analyze</div>
         <h3>Root Cause Analysis</h3>
-        <p>Technical review of contributing factors, component failure, operating conditions, and standards conformance.</p>
+        <p>Evaluation of contributing factors, equipment condition, operating environment, and standards compliance.</p>
       </div>
 
       <div class="card">
+        <div class="card-number">Support</div>
         <h3>Reports & Testimony</h3>
-        <p>Technical reports, demonstratives, deposition preparation, and testimony support.</p>
+        <p>Technical reports, demonstratives, deposition support, and expert testimony preparation.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="process" class="process">
+<section id="process" class="light">
   <div class="container">
-    <div class="section-title">
-      <h2>A Clear, Practical Process</h2>
-    </div>
-
-    <div class="grid">
-      <div class="card"><h3>1. Discovery</h3><p>Clarify goals, constraints, stakeholders, and success criteria.</p></div>
-      <div class="card"><h3>2. Requirements</h3><p>Define loads, cycles, geometry, environment, controls, and safety needs.</p></div>
-      <div class="card"><h3>3. Specifications</h3><p>Create or review specs, drawings, and acceptance tests.</p></div>
-      <div class="card"><h3>4. Sourcing</h3><p>Prepare RFQs, compare bids, and evaluate lifecycle cost.</p></div>
-      <div class="card"><h3>5. Implementation</h3><p>Support installation, testing, and punch-list completion.</p></div>
-      <div class="card"><h3>6. Support</h3><p>Assist with training, inspection planning, and long-term reliability.</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>Industries Served</h2>
-      <p>Support for heavy industrial, manufacturing, warehousing, and specialty material handling environments.</p>
-    </div>
-
-    <div class="industries">
-      <span class="tag">Manufacturing</span>
-      <span class="tag">Steel & Metals</span>
-      <span class="tag">Warehousing</span>
-      <span class="tag">Energy</span>
-      <span class="tag">Ports</span>
-      <span class="tag">Heavy Equipment</span>
-      <span class="tag">Aerospace</span>
-      <span class="tag">Automotive</span>
-    </div>
-  </div>
-</section>
-
-<section id="credentials" class="dark-section">
-  <div class="container">
-    <div class="section-title">
-      <h2>Credentials & Experience</h2>
-      <p>37+ years of hands-on overhead crane repair, inspection, modernization, installation, management, operation, and training experience.</p>
+    <div class="section-heading">
+      <h2>A disciplined process from first review to final recommendation.</h2>
+      <p>
+        Every engagement is structured around clarity, documentation, safety, and practical recommendations.
+      </p>
     </div>
 
     <div class="grid">
       <div class="card">
+        <div class="card-number">Step 01</div>
+        <h3>Discovery</h3>
+        <p>Define the objective, constraints, equipment, timeline, stakeholders, and available records.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">Step 02</div>
+        <h3>Technical Review</h3>
+        <p>Evaluate the application, specifications, safety requirements, installation conditions, or incident details.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">Step 03</div>
+        <h3>Recommendations</h3>
+        <p>Deliver clear findings, next steps, documentation, and practical guidance for decision-making.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials" class="dark">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Decades of real overhead crane experience.</h2>
+      <p>
+        37+ years of experience in crane repair, inspection, modernization, installation,
+        management, operation, training, and industry standards.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-number">Experience</div>
         <h3>Technical Background</h3>
         <ul>
-          <li>Mechanical, electrical, and structural crane components</li>
-          <li>Crane inspection and modernization</li>
-          <li>Installation, operation, and training</li>
+          <li>Overhead crane inspection and modernization</li>
+          <li>Mechanical, electrical, and structural components</li>
+          <li>Installation, operation, and maintenance support</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>Standards Knowledge</h3>
+        <div class="card-number">Standards</div>
+        <h3>Codes & Compliance</h3>
         <ul>
           <li>ASME B30 Committee Member</li>
           <li>OSHA 1910 and OSHA 1926</li>
-          <li>CMAA, NFPA 70, NEC, and ASTM</li>
+          <li>CMAA, NFPA 70, NEC, and ASTM familiarity</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>Industry Training</h3>
+        <div class="card-number">Training</div>
+        <h3>Professional Training</h3>
         <ul>
           <li>P&H Crane Inspector Training</li>
           <li>Naval Nuclear Power School</li>
@@ -454,16 +465,15 @@
 
 <section id="contact" class="contact">
   <div class="container">
-    <h2>Request a Consultation</h2>
-    <p>Email your objectives, timeline, drawings, specifications, or incident details.</p>
-    <p><strong>Email:</strong> <a href="mailto:mrmikeb@charter.net">mrmikeb@charter.net</a></p>
-    <p><strong>Phone:</strong> <a href="tel:16185788023">618-578-8023</a></p>
+    <h2>Start with a focused consultation.</h2>
+    <p>Send drawings, specifications, equipment concerns, or incident details for review.</p>
+    <p>Email: <a href="mailto:mrmikeb@charter.net">mrmikeb@charter.net</a></p>
+    <p>Phone: <a href="tel:16185788023">618-578-8023</a></p>
   </div>
 </section>
 
 <footer>
   <p>© 2026 Bongner Consulting Services. All rights reserved.</p>
-  <p>This website provides general technical information only. Always follow applicable laws, standards, and safety procedures.</p>
 </footer>
 
 </body>
