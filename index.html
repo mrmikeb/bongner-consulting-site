@@ -14,6 +14,7 @@
       --gray: #eef2f5;
       --dark: #1d252c;
       --white: #ffffff;
+      --light-text: #dce6ee;
     }
 
     * {
@@ -106,7 +107,7 @@
       font-size: 1.25rem;
       max-width: 760px;
       margin-bottom: 32px;
-      color: #dce6ee;
+      color: var(--light-text);
     }
 
     .buttons {
@@ -182,11 +183,10 @@
       color: var(--white);
     }
 
-    .dark-section p.
-.dark-section li {
-  color: #ffffff;
-  font-weight: 500;
-};
+    .dark-section p,
+    .dark-section li {
+      color: var(--light-text);
+      font-weight: 500;
     }
 
     ul {
@@ -234,6 +234,12 @@
       text-align: center;
       padding: 28px 20px;
       font-size: .9rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 850px) {
