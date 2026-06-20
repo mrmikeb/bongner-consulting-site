@@ -1,7 +1,7 @@
 :root{
   --bg:#f5f7f9;
   --text:#0f172a;
-  --muted:#6b7280;
+  --muted:#55606a; /* increased contrast for accessibility */
   --brand:#124a6b;
   --accent:#f59e0b;
   --container:1100px;
@@ -96,6 +96,9 @@ body{
   color:white;
   border:1px solid rgba(255,255,255,0.15);
 }
+
+/* focus styles for accessibility */
+.nav a:focus, .btn:focus{outline:3px solid rgba(18,74,107,0.18);outline-offset:3px}
 
 .section{padding:72px 0}
 .section h2{margin:0 0 18px;font-size:1.8rem}
