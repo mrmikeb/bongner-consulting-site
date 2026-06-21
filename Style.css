@@ -146,3 +146,58 @@ footer {
     padding-top: 100px;
   }
 }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.crane-graphic {
+  position: absolute;
+  right: -40px;
+  bottom: 30px;
+  width: 520px;
+  max-width: 45vw;
+  opacity: .18;
+  z-index: 1;
+}
+
+.industrial-strip {
+  height: 10px;
+  background: repeating-linear-gradient(
+    135deg,
+    #c9a24d 0 18px,
+    #101820 18px 36px
+  );
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(201,162,77,.25);
+  transform: rotate(45deg);
+}
