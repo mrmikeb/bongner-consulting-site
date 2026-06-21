@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+body <div class="industrial-strip"></div>
   font-family: Arial, sans-serif;
   color: #1f2933;
   background: #f4f6f8;
@@ -72,7 +72,21 @@ nav {
   letter-spacing: 0.5px;
 }
 
-.section {
+<svg class="crane-graphic" viewBox="0 0 700 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M80 80H620" stroke="#c9a24d" stroke-width="10"/>
+  <path d="M130 80V300" stroke="#c9a24d" stroke-width="10"/>
+  <path d="M570 80V155" stroke="#c9a24d" stroke-width="8"/>
+  <path d="M530 155H610" stroke="#c9a24d" stroke-width="8"/>
+  <path d="M555 155V230" stroke="#c9a24d" stroke-width="6"/>
+  <path d="M535 230L555 270L575 230H535Z" stroke="#c9a24d" stroke-width="6"/>
+  <path d="M130 125H620" stroke="#ffffff" stroke-width="2" opacity=".5"/>
+  <path d="M180 80L130 125" stroke="#ffffff" stroke-width="3" opacity=".5"/>
+  <path d="M240 80L190 125" stroke="#ffffff" stroke-width="3" opacity=".5"/>
+  <path d="M300 80L250 125" stroke="#ffffff" stroke-width="3" opacity=".5"/>
+  <path d="M360 80L310 125" stroke="#ffffff" stroke-width="3" opacity=".5"/>
+  <path d="M420 80L370 125" stroke="#ffffff" stroke-width="3" opacity=".5"/>
+  <path d="M480 80L430 125" stroke="#ffffff" stroke-width="3" opacity=".5"/>
+</svg>.section {
   padding: 80px 8%;
   text-align: center;
 }
