@@ -5,6 +5,12 @@ ORG:Bongner Consulting Services
 TEL;TYPE=WORK,VOICE:618-578-8023
 <a class="contact-save" href="contact.vcf" download>
   Add Contact to Phone
+<a class="linkedin-btn"
+   href="https://www.linkedin.com/in/michaelbongner"
+   target="_blank"
+   rel="noopener">
+   Connect on LinkedIn
+</a>
 </a>
 EMAIL:mrmikeb@charter.net
 URL:https://bongnerconsulting.com
