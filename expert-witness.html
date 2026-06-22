@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Overhead Crane Expert Witness Services | Bongner Consulting</title>
+  <meta name="description" content="Overhead crane expert witness services, failure analysis, standards review, litigation support, and technical consulting." />
+
+  <style>
+    :root {
+      --ink:#0b1118;
+      --navy:#111c2e;
+      --steel:#263747;
+      --gold:#c9a24d;
+      --light:#f5f6f8;
+      --white:#ffffff;
+      --line:#d9dee5;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    html { scroll-behavior:smooth; }
+
+    body {
+      font-family:"Segoe UI", Arial, sans-serif;
+      color:var(--ink);
+      line-height:1.65;
+      background:var(--white);
+    }
+
+    header {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(14px);
+    }
+
+    .nav {
+      max-width:1220px;
+      margin:auto;
+      padding:20px 28px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .brand {
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      color:var(--navy);
+      font-size:.95rem;
+    }
+
+    .brand span { color:var(--gold); }
+
+    nav a {
+      text-decoration:none;
+      margin-left:26px;
+      font-size:.9rem;
+      font-weight:700;
+      color:var(--ink);
+    }
+
+    nav a:hover { color:var(--gold); }
+
+    .industrial-strip {
+      height:10px;
+      background:repeating-linear-gradient(
+        135deg,
+        var(--gold) 0 18px,
+        var(--ink) 18px 36px
+      );
+    }
+
+    .hero {
+      position:relative;
+      min-height:82vh;
+      display:flex;
+      align-items:center;
+      color:var(--white);
+      overflow:hidden;
+      background:
+        linear-gradient(90deg, rgba(8,14,22,.96), rgba(17,28,46,.88)),
+        url("https://images.unsplash.com/photo-1581093458791-9d42cc6f9f56?auto=format&fit=crop&w=1800&q=80");
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size:44px 44px;
+      pointer-events:none;
+    }
+
+    .hero-inner {
+      max-width:1220px;
+      margin:auto;
+      padding:110px 28px;
+      position:relative;
+      z-index:2;
+      width:100%;
+    }
+
+    .eyebrow {
+      color:var(--gold);
+      font-weight:900;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      margin-bottom:22px;
+      font-size:.8rem;
+    }
+
+    h1 {
+      max-width:950px;
+      font-size:clamp(3rem, 7vw, 5.8rem);
+      line-height:.98;
+      letter-spacing:-.055em;
+      margin-bottom:28px;
+    }
+
+    .hero p {
+      max-width:760px;
+      font-size:1.25rem;
+      color:#e4e9ef;
+      margin-bottom:40px;
+    }
+
+    .hero-actions {
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .btn {
+      display:inline-block;
+      text-decoration:none;
+      padding:15px 24px;
+      font-weight:900;
+      border-radius:2px;
+      transition:all .25s ease;
+    }
+
+    .btn:hover { transform:translateY(-2px); }
+
+    .btn-primary {
+      background:var(--gold);
+      color:var(--ink);
+    }
+
+    .btn-secondary {
+      border:1px solid rgba(255,255,255,.65);
+      color:var(--white);
+    }
+
+    section { padding:96px 28px; }
+
+    .container {
+      max-width:1220px;
+      margin:auto;
+    }
+
+    .section-heading {
+      display:grid;
+      grid-template-columns:1fr 1.35fr;
+      gap:54px;
+      margin-bottom:52px;
+      align-items:start;
+    }
+
+    .section-heading h2 {
+      color:var(--navy);
+      font-size:clamp(2.1rem, 4vw, 3.4rem);
+      line-height:1.06;
+      letter-spacing:-.04em;
+    }
+
+    .section-heading p {
+      color:#4d5863;
+      font-size:1.08rem;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
+    }
+
+    .card {
+      background:var(--white);
+      border:1px solid var(--line);
+      padding:34px;
+      min-height:235px;
+      box-shadow:0 18px 45px rgba(16,24,32,.06);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::after {
+      content:"";
+      position:absolute;
+      right:-45px;
+      bottom:-45px;
+      width:130px;
+      height:130px;
+      border:1px solid rgba(201,162,77,.28);
+      transform:rotate(45deg);
+    }
+
+    .card-label {
+      color:var(--gold);
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      font-size:.75rem;
+      margin-bottom:18px;
+    }
+
+    .card h3 {
+      color:var(--navy);
+      font-size:1.2rem;
+      margin-bottom:12px;
+    }
+
+    .card p,
+    .card li {
+      color:#46515c;
+      font-size:.98rem;
+    }
+
+    ul { padding-left:18px; }
+    li { margin-bottom:9px; }
+
+    .dark {
+      background:linear-gradient(135deg, rgba(11,17,24,.98), rgba(17,28,46,.97));
+      color:var(--white);
+    }
+
+    .dark .section-heading h2,
+    .dark .card h3 { color:var(--white); }
+
+    .dark .section-heading p { color:#cbd3dc; }
+
+    .dark .card {
+      background:rgba(255,255,255,.045);
+      border:1px solid rgba(255,255,255,.13);
+      box-shadow:none;
+    }
+
+    .dark .card p,
+    .dark .card li {
+      color:#f3f5f7;
+      font-weight:500;
+    }
+
+    .light { background:var(--light); }
+
+    .checklist {
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:18px;
+    }
+
+    .check-item {
+      background:var(--white);
+      border:1px solid var(--line);
+      padding:22px;
+      font-weight:800;
+      color:var(--navy);
+      box-shadow:0 12px 32px rgba(16,24,32,.05);
+    }
+
+    .check-item span {
+      color:var(--gold);
+      margin-right:8px;
+    }
+
+    .profile-card {
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:6px;
+      padding:40px;
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:36px;
+      align-items:center;
+    }
+
+    .profile-photo {
+      width:180px;
+      height:220px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:6px;
+      border:3px solid rgba(201,162,77,.35);
+      box-shadow:0 15px 35px rgba(0,0,0,.25);
+    }
+
+    .profile-card h3 {
+      color:white;
+      font-size:2rem;
+      margin-bottom:8px;
+    }
+
+    .profile-title {
+      color:var(--gold);
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:18px;
+    }
+
+    .profile-card p {
+      color:#e8edf2;
+      font-size:1.05rem;
+      max-width:900px;
+    }
+
+    .profile-card a {
+      display:inline-block;
+      margin-top:20px;
+      color:var(--gold);
+      text-decoration:none;
+      font-weight:800;
+    }
+
+    .callout {
+      background:linear-gradient(135deg, var(--gold), #e0c46c);
+      color:var(--ink);
+      text-align:center;
+      padding:80px 28px;
+    }
+
+    .callout h2 {
+      font-size:clamp(2.2rem, 5vw, 4.2rem);
+      line-height:1;
+      letter-spacing:-.05em;
+      margin-bottom:18px;
+    }
+
+    .callout p {
+      font-size:1.1rem;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .callout a {
+      color:var(--ink);
+      font-weight:900;
+    }
+
+    footer {
+      background:#070c12;
+      color:#aeb8c2;
+      text-align:center;
+      padding:30px;
+      font-size:.9rem;
+    }
+
+    @media (max-width:900px) {
+      .nav { display:block; }
+
+      nav { margin-top:14px; }
+
+      nav a {
+        display:inline-block;
+        margin:8px 16px 0 0;
+      }
+
+      .section-heading,
+      .grid,
+      .checklist,
+      .profile-card {
+        grid-template-columns:1fr;
+      }
+
+      .profile-card {
+        text-align:center;
+      }
+
+      .profile-photo {
+        margin:auto;
+      }
+
+      .hero {
+        min-height:auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="industrial-strip"></div>
+
+<header>
+  <div class="nav">
+    <div class="brand">Bongner <span>Consulting</span> Services</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="expert-witness.html">Expert Witness</a>
+      <a href="index.html#credentials">Credentials</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Expert Witness Services • Crane Failure Analysis</div>
+
+    <h1>Overhead crane expert witness services.</h1>
+
+    <p>
+      Independent technical analysis, failure investigation, standards review,
+      litigation support, and expert witness services for crane-related matters.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#contact">Request Case Review</a>
+      <a class="btn btn-secondary" href="#support">Litigation Support</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>Technical support for crane-related disputes and incidents.</h2>
+      <p>
+        Bongner Consulting Services assists attorneys, insurers, manufacturers,
+        employers, and industrial organizations with technical review of overhead
+        crane incidents, equipment failures, standards compliance, and maintenance practices.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-label">Failure</div>
+        <h3>Failure Analysis</h3>
+        <p>Review of hoists, trolleys, bridges, runways, controls, electrical systems, mechanical components, and structural issues.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Incident</div>
+        <h3>Accident Investigation</h3>
+        <p>Technical review of incidents involving injury, property damage, operational failure, dropped loads, or equipment damage.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Standards</div>
+        <h3>Standards Compliance</h3>
+        <p>Evaluation involving OSHA, ASME B30, CMAA, NFPA 70, NEC, ASTM, and accepted industry practices.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Maintenance</div>
+        <h3>Inspection & Maintenance Disputes</h3>
+        <p>Analysis of inspection programs, repair decisions, service history, maintenance documentation, and operating procedures.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Operations</div>
+        <h3>Operator & Training Issues</h3>
+        <p>Review of operator practices, training records, supervision, procedures, and safe-use expectations.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Procurement</div>
+        <h3>Design & Application Review</h3>
+        <p>Evaluation of crane selection, application fit, duty cycle, specifications, installation conditions, and system limitations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="support" class="light">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Litigation support services.</h2>
+      <p>
+        Clear technical analysis, practical communication, and documentation support
+        for legal teams and claims professionals.
+      </p>
+    </div>
+
+    <div class="checklist">
+      <div class="check-item"><span>✓</span> Preliminary Case Review</div>
+      <div class="check-item"><span>✓</span> Root Cause Analysis</div>
+      <div class="check-item"><span>✓</span> Technical Report Preparation</div>
+      <div class="check-item"><span>✓</span> Standards Interpretation</div>
+      <div class="check-item"><span>✓</span> Document & Evidence Review</div>
+      <div class="check-item"><span>✓</span> Deposition Preparation</div>
+      <div class="check-item"><span>✓</span> Expert Testimony Support</div>
+      <div class="check-item"><span>✓</span> Demonstrative Exhibit Review</div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Qualified, practical, and standards-focused.</h2>
+      <p>
+        Real-world overhead crane experience combined with technical standards knowledge
+        and the ability to explain complex crane issues clearly.
+      </p>
+    </div>
+
+    <div class="profile-card">
+      <img
+        src="assets/img/michael-bongner.jpg"
+        alt="Michael Bongner"
+        class="profile-photo">
+
+      <div>
+        <h3>Michael Bongner</h3>
+        <p class="profile-title">Principal Consultant</p>
+
+        <p>
+          Over 37 years of experience in overhead crane inspection, modernization,
+          repair, installation, operations, training, safety compliance, and expert witness services.
+        </p>
+
+        <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">
+          View Professional LinkedIn Profile →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>Why attorneys and organizations retain Bongner Consulting.</h2>
+      <p>
+        Crane-related matters require more than general industrial experience.
+        They require specialized knowledge of overhead crane systems, maintenance,
+        inspection, operation, modernization, and applicable standards.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-label">Independent</div>
+        <h3>Vendor-Neutral Opinions</h3>
+        <p>Objective technical analysis based on documentation, equipment condition, standards, and facts.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Experienced</div>
+        <h3>Hands-On Crane Background</h3>
+        <p>Decades of direct experience with crane systems, inspections, maintenance, modernization, and operation.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Clear</div>
+        <h3>Plain-English Communication</h3>
+        <p>Technical findings explained clearly for attorneys, insurers, companies, and non-technical stakeholders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="callout">
+  <div class="container">
+    <h2>Need technical assistance with a crane-related matter?</h2>
+    <p>Contact Bongner Consulting Services for a confidential preliminary case discussion.</p>
+    <p>Email: <a href="mailto:mrmikeb@charter.net">mrmikeb@charter.net</a></p>
+    <p>Phone: <a href="tel:16185788023">618-578-8023</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Bongner Consulting Services. All rights reserved.</p>
+  <p>This website provides general technical information only. Always follow applicable laws, standards, and safety procedures.</p>
+</footer>
+
+</body>
+</html>
