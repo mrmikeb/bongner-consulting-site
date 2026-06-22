@@ -5,8 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Bongner Consulting Services | Overhead Crane Consulting</title>
-
   <meta name="description" content="Independent overhead crane consulting, material handling specifications, failure analysis, and expert witness services." />
+
+  <!-- Google Analytics - replace G-XXXXXXXXXX with your real Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-XXXXXXXXXX");
+  </script>
 
   <style>
     :root {
@@ -35,6 +43,15 @@
       color: var(--ink);
       background: var(--white);
       line-height: 1.65;
+    }
+
+    .industrial-strip {
+      height: 10px;
+      background: repeating-linear-gradient(
+        135deg,
+        var(--gold) 0 18px,
+        var(--ink) 18px 36px
+      );
     }
 
     header {
@@ -77,15 +94,6 @@
 
     nav a:hover {
       color: var(--gold);
-    }
-
-    .industrial-strip {
-      height: 10px;
-      background: repeating-linear-gradient(
-        135deg,
-        var(--gold) 0 18px,
-        var(--ink) 18px 36px
-      );
     }
 
     .hero {
@@ -157,7 +165,6 @@
       text-decoration: none;
       padding: 15px 24px;
       font-weight: 900;
-      letter-spacing: .02em;
       border-radius: 2px;
       transition: all .25s ease;
     }
@@ -273,8 +280,7 @@
     }
 
     .dark {
-      background:
-        linear-gradient(135deg, rgba(11,17,24,.98), rgba(17,28,46,.97));
+      background: linear-gradient(135deg, rgba(11,17,24,.98), rgba(17,28,46,.97));
       color: var(--white);
     }
 
@@ -340,6 +346,37 @@
       font-size: .9rem;
     }
 
+    .expert-callout {
+      background: linear-gradient(135deg, var(--gold), #e0c46c);
+      color: var(--ink);
+      padding: 34px;
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1.4fr auto;
+      gap: 24px;
+      align-items: center;
+      border-radius: 4px;
+    }
+
+    .expert-callout h3 {
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+    }
+
+    .expert-callout p {
+      font-weight: 700;
+    }
+
+    .expert-callout a {
+      background: var(--ink);
+      color: white;
+      padding: 13px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
     .industries {
       display: flex;
       flex-wrap: wrap;
@@ -355,22 +392,66 @@
       font-size: .9rem;
     }
 
+    .linkedin-preview,
     .leadership-card {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.15);
-      padding: 40px;
-      margin-bottom: 40px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.16);
       border-radius: 6px;
+      margin-bottom: 36px;
+    }
+
+    .linkedin-preview {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 72px 1fr auto;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .linkedin-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 1.4rem;
+    }
+
+    .linkedin-preview h3,
+    .leadership-card h3 {
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .linkedin-preview p,
+    .leadership-card p {
+      color: #e8edf2;
+    }
+
+    .linkedin-preview a {
+      background: #0077b5;
+      color: white;
+      padding: 13px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .leadership-card {
+      padding: 40px;
     }
 
     .leadership-card h3 {
-      color: #ffffff;
       font-size: 2rem;
       margin-bottom: 8px;
     }
 
     .leadership-title {
-      color: var(--gold);
+      color: var(--gold) !important;
       font-weight: 800;
       letter-spacing: .08em;
       text-transform: uppercase;
@@ -378,7 +459,6 @@
     }
 
     .leadership-card p {
-      color: #f3f5f7;
       font-size: 1.05rem;
       max-width: 900px;
     }
@@ -389,10 +469,6 @@
       color: var(--gold);
       text-decoration: none;
       font-weight: 800;
-    }
-
-    .leadership-card a:hover {
-      text-decoration: underline;
     }
 
     .contact {
@@ -443,19 +519,9 @@
       color: var(--ink) !important;
     }
 
-    .contact-save:hover {
-      background: #d8b763;
-      transform: translateY(-2px);
-    }
-
     .linkedin-btn {
       background: #0077b5;
       color: white !important;
-    }
-
-    .linkedin-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0,119,181,.35);
     }
 
     .floating-consult {
@@ -473,9 +539,10 @@
       transition: all .25s ease;
     }
 
-    .floating-consult:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 42px rgba(0,0,0,.32);
+    .floating-consult:hover,
+    .contact-save:hover,
+    .linkedin-btn:hover {
+      transform: translateY(-2px);
     }
 
     footer {
@@ -502,7 +569,9 @@
 
       .section-heading,
       .grid,
-      .stats {
+      .stats,
+      .expert-callout,
+      .linkedin-preview {
         grid-template-columns: 1fr;
       }
 
@@ -692,6 +761,18 @@
         <p>Technical reports, demonstratives, deposition preparation, and expert testimony support.</p>
       </div>
     </div>
+
+    <div class="expert-callout">
+      <div>
+        <h3>Need independent analysis for an overhead crane incident?</h3>
+        <p>
+          Technical review, failure analysis, document evaluation, and expert witness support
+          for attorneys, insurers, and industrial organizations.
+        </p>
+      </div>
+
+      <a href="#contact">Discuss a Case</a>
+    </div>
   </div>
 </section>
 
@@ -751,22 +832,6 @@
 </section>
 
 <section id="credentials" class="dark">
- <div class="linkedin-preview">
-  <div class="linkedin-avatar">MB</div>
-
-  <div>
-    <h3>Michael Bongner</h3>
-    <p>
-      Principal Consultant · 37+ Years Overhead Crane Experience · ASME B30 Committee Member
-    </p>
-  </div>
-
-  <a href="https://www.linkedin.com/in/michaelbongner"
-     target="_blank"
-     rel="noopener">
-    View LinkedIn
-  </a>
-</div>
   <div class="container">
     <div class="section-heading">
       <h2>Decades of real overhead crane experience.</h2>
@@ -774,6 +839,19 @@
         37+ years of overhead crane repair, inspection, modernization,
         installation, management, operation, training, and industry standards experience.
       </p>
+    </div>
+
+    <div class="linkedin-preview">
+      <div class="linkedin-avatar">MB</div>
+
+      <div>
+        <h3>Michael Bongner</h3>
+        <p>Principal Consultant · 37+ Years Overhead Crane Experience · ASME B30 Committee Member</p>
+      </div>
+
+      <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">
+        View LinkedIn
+      </a>
     </div>
 
     <div class="leadership-card">
@@ -786,9 +864,7 @@
         safety compliance, and expert witness services.
       </p>
 
-      <a href="https://www.linkedin.com/in/michaelbongner"
-         target="_blank"
-         rel="noopener">
+      <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">
         View Professional LinkedIn Profile →
       </a>
     </div>
@@ -801,7 +877,7 @@
           <li>Overhead crane repair, inspection, and modernization</li>
           <li>Mechanical, electrical, and structural crane components</li>
           <li>Installation, operation, management, and training</li>
-          <li> Modernizations and upgrades </li>
+          <li>Modernizations and upgrades</li>
         </ul>
       </div>
 
@@ -809,7 +885,8 @@
         <div class="card-label">Standards</div>
         <h3>Codes & Compliance</h3>
         <ul>
-          <li>ASME Subcommittee member: B30.2 and B30.17 </li>
+          <li>ASME B30 Committee Member</li>
+          <li>Subcommittees B30.2 and B30.17</li>
           <li>OSHA 1910 and OSHA 1926</li>
           <li>CMAA, NFPA 70, NEC, and ASTM</li>
         </ul>
