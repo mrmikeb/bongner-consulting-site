@@ -1,0 +1,26 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Bongner Consulting Services
+ORG:Bongner Consulting Services
+TEL;TYPE=WORK,VOICE:618-578-8023
+<a class="contact-save" href="contact.vcf" download>
+  Add Contact to Phone
+</a>
+EMAIL:mrmikeb@charter.net
+URL:https://bongnerconsulting.com
+END:VCARD
+
+.contact-save {
+  display: inline-block;
+  margin-top: 18px;
+  background: var(--gold);
+  color: var(--ink) !important;
+  padding: 14px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.contact-save:hover {
+  background: #d8b763;
+}
