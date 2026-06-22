@@ -392,20 +392,16 @@
       font-size: .9rem;
     }
 
-    .linkedin-preview,
     .leadership-card {
       background: rgba(255,255,255,.06);
       border: 1px solid rgba(255,255,255,.16);
       border-radius: 6px;
       margin-bottom: 36px;
-    }
-
-    .linkedin-preview {
-      padding: 34px;
+      padding: 40px;
       display: grid;
-      grid-template-columns: 72px 1fr auto;
+      grid-template-columns: 72px 1fr;
       gap: 22px;
-      align-items: center;
+      align-items: start;
     }
 
     .linkedin-avatar {
@@ -420,32 +416,8 @@
       font-size: 1.4rem;
     }
 
-    .linkedin-preview h3,
     .leadership-card h3 {
       color: white;
-      font-size: 1.5rem;
-    }
-
-    .linkedin-preview p,
-    .leadership-card p {
-      color: #e8edf2;
-    }
-
-    .linkedin-preview a {
-      background: #0077b5;
-      color: white;
-      padding: 13px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .leadership-card {
-      padding: 40px;
-    }
-
-    .leadership-card h3 {
       font-size: 2rem;
       margin-bottom: 8px;
     }
@@ -459,6 +431,7 @@
     }
 
     .leadership-card p {
+      color: #e8edf2;
       font-size: 1.05rem;
       max-width: 900px;
     }
@@ -469,6 +442,10 @@
       color: var(--gold);
       text-decoration: none;
       font-weight: 800;
+    }
+
+    .leadership-card a:hover {
+      text-decoration: underline;
     }
 
     .contact {
@@ -571,7 +548,7 @@
       .grid,
       .stats,
       .expert-callout,
-      .linkedin-preview {
+      .leadership-card {
         grid-template-columns: 1fr;
       }
 
@@ -834,39 +811,30 @@
 <section id="credentials" class="dark">
   <div class="container">
     <div class="section-heading">
-      <h2>Decades of real overhead crane experience.</h2>
+      <h2>Industry Experience, Technical Training & Standards Leadership</h2>
       <p>
         37+ years of overhead crane repair, inspection, modernization,
         installation, management, operation, training, and industry standards experience.
       </p>
     </div>
 
-    <div class="linkedin-preview">
+    <div class="leadership-card">
       <div class="linkedin-avatar">MB</div>
 
       <div>
         <h3>Michael Bongner</h3>
-        <p>Principal Consultant · 37+ Years Overhead Crane Experience · ASME B30 Committee Member</p>
+        <p class="leadership-title">Principal Consultant</p>
+
+        <p>
+          Over 37 years of experience in overhead crane inspection,
+          modernization, repair, installation, operations, training,
+          safety compliance, and expert witness services.
+        </p>
+
+        <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">
+          View Professional LinkedIn Profile →
+        </a>
       </div>
-
-      <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">
-        View LinkedIn
-      </a>
-    </div>
-
-    <div class="leadership-card">
-      <h3>Michael Bongner</h3>
-      <p class="leadership-title">Principal Consultant</p>
-
-      <p>
-        Over 37 years of experience in overhead crane inspection,
-        modernization, repair, installation, operations, training,
-        safety compliance, and expert witness services.
-      </p>
-
-      <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">
-        View Professional LinkedIn Profile →
-      </a>
     </div>
 
     <div class="grid">
@@ -887,8 +855,11 @@
         <ul>
           <li>ASME B30 Committee Member</li>
           <li>Subcommittees B30.2 and B30.17</li>
-          <li>OSHA 1910 and OSHA 1926</li>
-          <li>CMAA, NFPA 70, NEC, and ASTM</li>
+          <li>OSHA 1910 General Industry Standards</li>
+          <li>OSHA 1926 Construction Standards</li>
+          <li>CMAA Specifications and Recommended Practices</li>
+          <li>NFPA 70 National Electrical Code (NEC)</li>
+          <li>ASTM Standards and Industry Best Practices</li>
         </ul>
       </div>
 
@@ -897,8 +868,8 @@
         <h3>Professional Training</h3>
         <ul>
           <li>Naval Nuclear Power School</li>
+          <li>Factory-trained by leading hoist and overhead crane manufacturers with extensive technical training in equipment design, application, inspection, maintenance, and safety compliance.</li>
           <li>Fall protection, vibration analysis, and laser shaft alignment training</li>
-          <li>Factory-Trained by Leading Hoist and Overhead Crane Manufacturers, with extensive technical training in equipment design, application, inspection, maintenance, and afety compliance.</li>
         </ul>
       </div>
     </div>
