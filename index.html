@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Bongner Consulting Services | Overhead Crane Consulting</title>
+
   <meta name="description" content="Independent overhead crane consulting, material handling specifications, failure analysis, and expert witness services." />
 
   <style>
@@ -33,10 +35,6 @@
       color: var(--ink);
       background: var(--white);
       line-height: 1.65;
-    }
-
-    a {
-      color: inherit;
     }
 
     header {
@@ -71,7 +69,7 @@
 
     nav a {
       text-decoration: none;
-      margin-left: 28px;
+      margin-left: 26px;
       font-size: .9rem;
       font-weight: 700;
       color: var(--ink);
@@ -79,6 +77,15 @@
 
     nav a:hover {
       color: var(--gold);
+    }
+
+    .industrial-strip {
+      height: 10px;
+      background: repeating-linear-gradient(
+        135deg,
+        var(--gold) 0 18px,
+        var(--ink) 18px 36px
+      );
     }
 
     .hero {
@@ -188,15 +195,6 @@
       z-index: 1;
     }
 
-    .industrial-strip {
-      height: 10px;
-      background: repeating-linear-gradient(
-        135deg,
-        var(--gold) 0 18px,
-        var(--ink) 18px 36px
-      );
-    }
-
     section {
       padding: 96px 28px;
     }
@@ -276,8 +274,7 @@
 
     .dark {
       background:
-        linear-gradient(135deg, rgba(11,17,24,.98), rgba(17,28,46,.97)),
-        radial-gradient(circle at top right, rgba(201,162,77,.12), transparent 35%);
+        linear-gradient(135deg, rgba(11,17,24,.98), rgba(17,28,46,.97));
       color: var(--white);
     }
 
@@ -358,6 +355,46 @@
       font-size: .9rem;
     }
 
+    .leadership-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 40px;
+      margin-bottom: 40px;
+      border-radius: 6px;
+    }
+
+    .leadership-card h3 {
+      color: #ffffff;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .leadership-title {
+      color: var(--gold);
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .leadership-card p {
+      color: #f3f5f7;
+      font-size: 1.05rem;
+      max-width: 900px;
+    }
+
+    .leadership-card a {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .leadership-card a:hover {
+      text-decoration: underline;
+    }
+
     .contact {
       background: var(--navy);
       color: var(--white);
@@ -381,6 +418,64 @@
       color: var(--gold);
       font-weight: 900;
       text-decoration: none;
+    }
+
+    .contact-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-save,
+    .linkedin-btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 900;
+      transition: all .25s ease;
+    }
+
+    .contact-save {
+      background: var(--gold);
+      color: var(--ink) !important;
+    }
+
+    .contact-save:hover {
+      background: #d8b763;
+      transform: translateY(-2px);
+    }
+
+    .linkedin-btn {
+      background: #0077b5;
+      color: white !important;
+    }
+
+    .linkedin-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,119,181,.35);
+    }
+
+    .floating-consult {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2000;
+      background: var(--gold);
+      color: var(--ink);
+      padding: 14px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 900;
+      box-shadow: 0 14px 35px rgba(0,0,0,.25);
+      transition: all .25s ease;
+    }
+
+    .floating-consult:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 42px rgba(0,0,0,.32);
     }
 
     footer {
@@ -424,7 +519,15 @@
       .hero {
         min-height: auto;
       }
+    }
 
+    @media (max-width: 700px) {
+      .floating-consult {
+        right: 16px;
+        bottom: 16px;
+        font-size: .85rem;
+        padding: 12px 16px;
+      }
     }
   </style>
 </head>
@@ -436,12 +539,14 @@
 <header>
   <div class="nav">
     <div class="brand">Bongner <span>Consulting</span> Services</div>
+
     <nav>
       <a href="#services">Services</a>
       <a href="#expert">Expert Witness</a>
       <a href="#process">Process</a>
       <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </div>
 </header>
@@ -449,7 +554,9 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="eyebrow">Overhead Crane Consulting • Failure Analysis</div>
+
     <h1>Independent expertise for complex material handling systems.</h1>
+
     <p>
       Vendor-neutral consulting, crane specifications, procurement support,
       safety-focused evaluations, and expert witness services backed by decades
@@ -458,7 +565,7 @@
 
     <div class="hero-actions">
       <a class="btn btn-primary" href="#contact">Request Consultation</a>
-      <a class="btn btn-secondary" href="#credentials">View Credentials</a>
+      <a class="btn btn-secondary" href="#services">Explore Services</a>
     </div>
   </div>
 
@@ -486,14 +593,17 @@
         <strong>37+</strong>
         <span>Years of crane experience</span>
       </div>
+
       <div class="stat">
         <strong>B30</strong>
         <span>ASME committee member</span>
       </div>
+
       <div class="stat">
         <strong>OSHA</strong>
         <span>Standards-focused support</span>
       </div>
+
       <div class="stat">
         <strong>100%</strong>
         <span>Vendor-neutral guidance</span>
@@ -650,6 +760,23 @@
       </p>
     </div>
 
+    <div class="leadership-card">
+      <h3>Michael Bongner</h3>
+      <p class="leadership-title">Principal Consultant</p>
+
+      <p>
+        Over 37 years of experience in overhead crane inspection,
+        modernization, repair, installation, operations, training,
+        safety compliance, and expert witness services.
+      </p>
+
+      <a href="https://www.linkedin.com/in/michaelbongner"
+         target="_blank"
+         rel="noopener">
+        View Professional LinkedIn Profile →
+      </a>
+    </div>
+
     <div class="grid">
       <div class="card">
         <div class="card-label">Experience</div>
@@ -658,7 +785,7 @@
           <li>Overhead crane repair, inspection, and modernization</li>
           <li>Mechanical, electrical, and structural crane components</li>
           <li>Installation, operation, management, and training</li>
-          <li>Modernizations and upgrades</li>
+          <li> Modernizations and upgrades </li>
         </ul>
       </div>
 
@@ -666,8 +793,7 @@
         <div class="card-label">Standards</div>
         <h3>Codes & Compliance</h3>
         <ul>
-          <li>ASME B30 Committee Member</li>
-          <li>Subcommittees B30.2 and B30.17</li>
+          <li>ASME Subcommittees Member B30: B30.2 and B30.17 </li>
           <li>OSHA 1910 and OSHA 1926</li>
           <li>CMAA, NFPA 70, NEC, and ASTM</li>
         </ul>
@@ -679,7 +805,7 @@
         <ul>
           <li>Naval Nuclear Power School</li>
           <li>Fall protection, vibration analysis, and laser shaft alignment training</li>
-          <li>Factory-Trained by Leading Hoist and Overhead Crane Manufacturers, with extensive technical training in equipment design, application, inspection, maintenance, safety compliance, an[...]
+          <li>Factory-Trained by Leading Hoist and Overhead Crane Manufacturers, with extensive technical training in equipment design, application, inspection, maintenance, and afety compliance.</li>
         </ul>
       </div>
     </div>
@@ -689,9 +815,22 @@
 <section id="contact" class="contact">
   <div class="container">
     <h2>Start with a focused consultation.</h2>
+
     <p>Send your objectives, timeline, drawings, specifications, or incident details for review.</p>
+
     <p>Email: <a href="mailto:mrmikeb@charter.net">mrmikeb@charter.net</a></p>
     <p>Phone: <a href="tel:16185788023">618-578-8023</a></p>
+
+    <div class="contact-buttons">
+      <a class="contact-save" href="contact.vcf" download>Add Contact to Phone</a>
+
+      <a class="linkedin-btn"
+         href="https://www.linkedin.com/in/michaelbongner"
+         target="_blank"
+         rel="noopener">
+        Connect on LinkedIn
+      </a>
+    </div>
   </div>
 </section>
 
@@ -699,6 +838,8 @@
   <p>© 2026 Bongner Consulting Services. All rights reserved.</p>
   <p>This website provides general technical information only. Always follow applicable laws, standards, and safety procedures.</p>
 </footer>
+
+<a class="floating-consult" href="#contact">Schedule Consultation</a>
 
 </body>
 </html>
