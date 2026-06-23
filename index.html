@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Bongner Consulting Services | Overhead Crane Consulting</title>
-  <meta name="description" content="Independent overhead crane consulting, material handling specifications, failure analysis, and expert witness services." />
+  <meta name="description" content="Overhead crane consulting, failure analysis, expert witness services, specifications, standards review, and vendor-neutral technical support." />
 
   <!-- Google Analytics - replace G-XXXXXXXXXX with your real Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -58,7 +58,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,.96);
+      background: rgba(255,255,255,.97);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(14px);
     }
@@ -66,21 +66,37 @@
     .nav {
       max-width: 1220px;
       margin: auto;
-      padding: 12px 28px;
+      padding: 16px 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 24px;
     }
 
-    .brand-logo {
+    .brand-link {
       display: flex;
       align-items: center;
+      gap: 14px;
       text-decoration: none;
     }
 
-    .brand-logo img {
+    .site-logo {
       height: 58px;
       width: auto;
+      display: block;
+    }
+
+    .brand-text {
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--navy);
+      font-size: .9rem;
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      color: var(--gold);
       display: block;
     }
 
@@ -90,6 +106,7 @@
       font-size: .9rem;
       font-weight: 700;
       color: var(--ink);
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -98,7 +115,7 @@
 
     .hero {
       position: relative;
-      min-height: 92vh;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -140,7 +157,7 @@
     }
 
     h1 {
-      max-width: 900px;
+      max-width: 980px;
       font-size: clamp(3rem, 7vw, 6rem);
       line-height: .98;
       letter-spacing: -.055em;
@@ -148,7 +165,7 @@
     }
 
     .hero p {
-      max-width: 740px;
+      max-width: 780px;
       font-size: 1.25rem;
       color: #e4e9ef;
       margin-bottom: 40px;
@@ -192,6 +209,16 @@
       border-color: #ffffff;
     }
 
+    .crane-graphic {
+      position: absolute;
+      right: -90px;
+      bottom: 20px;
+      width: 620px;
+      max-width: 46vw;
+      opacity: .13;
+      z-index: 1;
+    }
+
     section {
       padding: 96px 28px;
     }
@@ -199,6 +226,42 @@
     .container {
       max-width: 1220px;
       margin: auto;
+    }
+
+    .trust-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item {
+      padding: 26px 18px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+      font-weight: 900;
+      color: var(--navy);
+      font-size: .88rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-item span {
+      display: block;
+      color: var(--gold);
+      font-size: .78rem;
+      margin-bottom: 5px;
+      letter-spacing: .14em;
     }
 
     .section-heading {
@@ -307,35 +370,6 @@
       margin-bottom: 9px;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .stat {
-      padding: 34px;
-      border-right: 1px solid var(--line);
-    }
-
-    .stat:last-child {
-      border-right: none;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 2.4rem;
-      color: var(--navy);
-      letter-spacing: -.04em;
-    }
-
-    .stat span {
-      color: var(--slate);
-      font-weight: 700;
-      font-size: .9rem;
-    }
-
     .expert-callout {
       background: linear-gradient(135deg, var(--gold), #e0c46c);
       color: var(--ink);
@@ -365,6 +399,22 @@
       text-decoration: none;
       font-weight: 900;
       white-space: nowrap;
+    }
+
+    .client-types {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .client-type {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 22px;
+      text-align: center;
+      font-weight: 900;
+      color: var(--navy);
+      box-shadow: 0 12px 32px rgba(16,24,32,.05);
     }
 
     .industries {
@@ -455,6 +505,30 @@
       font-size: 1.08rem;
     }
 
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 34px auto 0;
+      max-width: 950px;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      padding: 24px;
+      border-radius: 6px;
+    }
+
+    .contact-box strong {
+      display: block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: .8rem;
+      margin-bottom: 8px;
+    }
+
     .contact a {
       color: var(--gold);
       font-weight: 900;
@@ -462,7 +536,7 @@
     }
 
     .contact-buttons {
-      margin-top: 24px;
+      margin-top: 28px;
       display: flex;
       gap: 12px;
       justify-content: center;
@@ -514,36 +588,27 @@
       background: #070c12;
       color: #aeb8c2;
       text-align: center;
-      padding: 42px 30px;
+      padding: 30px;
       font-size: .9rem;
     }
 
-    .footer-logo {
-      height: 130px;
-      width: auto;
-      max-width: 90%;
-      margin-bottom: 20px;
-      background: #ffffff;
-      padding: 10px;
-      border-radius: 4px;
-    }
+    @media (max-width: 1000px) {
+      .nav {
+        align-items: flex-start;
+      }
 
-    .footer-tagline {
-      font-size: .9rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: #aeb8c2;
-      margin: 8px 0 12px;
+      nav a {
+        margin-left: 16px;
+      }
     }
 
     @media (max-width: 900px) {
       .nav {
         display: block;
-        padding: 12px 20px;
       }
 
-      .brand-logo img {
-        height: 48px;
+      .brand-link {
+        margin-bottom: 12px;
       }
 
       nav {
@@ -557,10 +622,17 @@
 
       .section-heading,
       .grid,
-      .stats,
+      .trust-grid,
       .expert-callout,
-      .leadership-card {
+      .leadership-card,
+      .client-types,
+      .contact-grid {
         grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
       }
 
       .leadership-card {
@@ -571,17 +643,13 @@
         margin: auto;
       }
 
-      .stat {
-        border-right: none;
-        border-bottom: 1px solid var(--line);
+      .crane-graphic {
+        opacity: .08;
+        max-width: 90vw;
       }
 
       .hero {
         min-height: auto;
-      }
-
-      .footer-logo {
-        height: 95px;
       }
     }
 
@@ -591,6 +659,10 @@
         bottom: 16px;
         font-size: .85rem;
         padding: 12px 16px;
+      }
+
+      .site-logo {
+        height: 48px;
       }
     }
   </style>
@@ -602,16 +674,18 @@
 
 <header>
   <div class="nav">
-    <a href="index.html" class="brand-logo">
-      <img
-        src="assets/img/bongner-logo-primary-no-tagline.png"
-        alt="Bongner Consulting Services">
+    <a class="brand-link" href="index.html">
+      <img src="assets/img/bongner-logo.png" alt="Bongner Consulting Services logo" class="site-logo">
+      <div class="brand-text">
+        Bongner
+        <span>Consulting Services</span>
+      </div>
     </a>
 
     <nav>
       <a href="#services">Services</a>
       <a href="expert-witness.html">Expert Witness</a>
-      <a href="#process">Process</a>
+      <a href="#clients">Who We Serve</a>
       <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
       <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">LinkedIn</a>
@@ -621,45 +695,39 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">Overhead Crane Consulting • Failure Analysis</div>
+    <div class="eyebrow">Overhead Crane Consulting • Failure Analysis • Expert Witness</div>
 
-    <h1>Independent expertise for complex material handling systems.</h1>
+    <h1>Overhead crane consulting, failure analysis & expert witness services.</h1>
 
     <p>
-      Vendor-neutral consulting, crane specifications, procurement support,
-      safety-focused evaluations, and expert witness services backed by decades
-      of hands-on overhead crane experience.
+      Independent technical expertise backed by 37+ years of overhead crane inspection,
+      modernization, safety compliance, training, and standards leadership.
     </p>
 
     <div class="hero-actions">
       <a class="btn btn-primary" href="#contact">Request Consultation</a>
-      <a class="btn btn-secondary" href="#services">Explore Services</a>
+      <a class="btn btn-secondary" href="expert-witness.html">Expert Witness Services</a>
     </div>
   </div>
+
+  <svg class="crane-graphic" viewBox="0 0 700 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M80 80H620" stroke="#c9a24d" stroke-width="10"/>
+    <path d="M130 80V300" stroke="#c9a24d" stroke-width="10"/>
+    <path d="M570 80V155" stroke="#c9a24d" stroke-width="8"/>
+    <path d="M530 155H610" stroke="#c9a24d" stroke-width="8"/>
+    <path d="M555 155V230" stroke="#c9a24d" stroke-width="6"/>
+    <path d="M535 230L555 270L575 230H535Z" stroke="#c9a24d" stroke-width="6"/>
+  </svg>
 </section>
 
-<section>
+<section class="trust-bar">
   <div class="container">
-    <div class="stats">
-      <div class="stat">
-        <strong>37+</strong>
-        <span>Years of crane experience</span>
-      </div>
-
-      <div class="stat">
-        <strong>B30</strong>
-        <span>ASME committee member</span>
-      </div>
-
-      <div class="stat">
-        <strong>OSHA</strong>
-        <span>Standards-focused support</span>
-      </div>
-
-      <div class="stat">
-        <strong>100%</strong>
-        <span>Vendor-neutral guidance</span>
-      </div>
+    <div class="trust-grid">
+      <div class="trust-item"><span>37+</span>Years Experience</div>
+      <div class="trust-item"><span>ASME</span>B30 Committee Member</div>
+      <div class="trust-item"><span>OSHA</span>Standards-Focused</div>
+      <div class="trust-item"><span>100%</span>Vendor-Neutral</div>
+      <div class="trust-item"><span>Expert</span>Witness Services</div>
     </div>
   </div>
 </section>
@@ -754,7 +822,7 @@
         </p>
       </div>
 
-      <a href="expert-witness.html">View Expert Witness Services</a>
+      <a href="expert-witness.html">View Expert Witness Page</a>
     </div>
   </div>
 </section>
@@ -791,7 +859,30 @@
   </div>
 </section>
 
-<section>
+<section id="clients">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Who we serve.</h2>
+      <p>
+        Technical consulting and expert support for organizations that need clear,
+        independent insight into overhead crane systems, safety, maintenance, and failures.
+      </p>
+    </div>
+
+    <div class="client-types">
+      <div class="client-type">Attorneys</div>
+      <div class="client-type">Insurance Carriers</div>
+      <div class="client-type">Manufacturing Facilities</div>
+      <div class="client-type">Engineering Firms</div>
+      <div class="client-type">Utilities</div>
+      <div class="client-type">Municipalities</div>
+      <div class="client-type">Material Handling Integrators</div>
+      <div class="client-type">Industrial Organizations</div>
+    </div>
+  </div>
+</section>
+
+<section class="light">
   <div class="container">
     <div class="section-heading">
       <h2>Industries and applications served.</h2>
@@ -891,8 +982,22 @@
 
     <p>Send your objectives, timeline, drawings, specifications, or incident details for review.</p>
 
-    <p>Email: <a href="mailto:mrmikeb@charter.net">mrmikeb@charter.net</a></p>
-    <p>Phone: <a href="tel:16185788023">618-578-8023</a></p>
+    <div class="contact-grid">
+      <div class="contact-box">
+        <strong>Consultation Requests</strong>
+        <a href="tel:16185788023">618-578-8023</a>
+      </div>
+
+      <div class="contact-box">
+        <strong>Technical Inquiries</strong>
+        <a href="mailto:mrmikeb@charter.net">mrmikeb@charter.net</a>
+      </div>
+
+      <div class="contact-box">
+        <strong>Service Area</strong>
+        <p>Serving Clients Nationwide</p>
+      </div>
+    </div>
 
     <div class="contact-buttons">
       <a class="contact-save" href="contact.vcf" download>Add Contact to Phone</a>
@@ -908,22 +1013,8 @@
 </section>
 
 <footer>
-  <img
-    src="assets/img/bongner-logo-primary-full.png"
-    alt="Bongner Consulting Services"
-    class="footer-logo">
-
-  <p>
-    © 2026 Bongner Consulting Services. All rights reserved.
-  </p>
-
-  <p class="footer-tagline">
-    Crane Consulting | Failure Analysis | Expert Witness
-  </p>
-
-  <p>
-    This website provides general technical information only. Always follow applicable laws, standards, and safety procedures.
-  </p>
+  <p>© 2026 Bongner Consulting Services. All rights reserved.</p>
+  <p>This website provides general technical information only. Always follow applicable laws, standards, and safety procedures.</p>
 </footer>
 
 <a class="floating-consult" href="#contact">Schedule Consultation</a>
