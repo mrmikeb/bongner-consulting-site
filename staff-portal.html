@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Employee Portal | Bongner Consulting Services</title>
+  <meta name="description" content="Secure staff portal for Bongner Consulting Services." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    :root {
+      --ink: #0b1118;
+      --navy: #111c2e;
+      --steel: #263747;
+      --slate: #5c6773;
+      --gold: #c9a24d;
+      --light: #f5f7fa;
+      --white: #ffffff;
+      --muted: #d7dde5;
+      --danger: #7c2d12;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(11, 17, 24, 0.86), rgba(11, 17, 24, 0.92)),
+        radial-gradient(circle at top left, rgba(201, 162, 77, 0.22), transparent 32%),
+        linear-gradient(135deg, #111c2e, #0b1118);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .portal-header {
+      padding: 1.25rem 6%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(11, 17, 24, 0.72);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-top: 0.2rem;
+      letter-spacing: 0.08em;
+    }
+
+    .home-link {
+      color: var(--white);
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 0.65rem 0.9rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .home-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+
+    .portal-main {
+      padding: 4rem 6%;
+    }
+
+    .portal-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      color: var(--gold);
+      border: 1px solid rgba(201, 162, 77, 0.35);
+      background: rgba(201, 162, 77, 0.1);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      color: var(--white);
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1.03;
+      margin: 0 0 1rem;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.7;
+      max-width: 780px;
+      margin-bottom: 2.2rem;
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+      margin-top: 2rem;
+    }
+
+    .portal-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 230px;
+      padding: 1.35rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+    }
+
+    .portal-card h2 {
+      margin: 0 0 0.6rem;
+      color: var(--navy);
+      font-size: 1.2rem;
+    }
+
+    .portal-card p {
+      margin: 0 0 1.25rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    .portal-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .portal-button:hover {
+      background: var(--steel);
+      transform: translateY(-1px);
+    }
+
+    .portal-button.gold {
+      background: var(--gold);
+      color: #111;
+    }
+
+    .portal-button.gold:hover {
+      background: #d7b15b;
+    }
+
+    .notice {
+      margin-top: 2rem;
+      background: rgba(255, 255, 255, 0.94);
+      border-left: 5px solid var(--gold);
+      border-radius: 14px;
+      padding: 1.2rem 1.35rem;
+      color: var(--steel);
+      line-height: 1.65;
+    }
+
+    .notice strong {
+      color: var(--navy);
+    }
+
+    .portal-footer {
+      color: rgba(255, 255, 255, 0.68);
+      text-align: center;
+      padding: 2rem 6%;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .portal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .portal-main {
+        padding-top: 3rem;
+      }
+
+      .portal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portal-card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="portal-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        Bongner Consulting Services
+        <span>Staff Portal</span>
+      </a>
+
+      <a class="home-link" href="index.html">Back to Website</a>
+    </div>
+  </header>
+
+  <main class="portal-main">
+    <section class="portal-wrap">
+      <div class="eyebrow">Authorized Staff Access</div>
+
+      <h1>Employee Portal</h1>
+
+      <p class="intro">
+        Secure access point for Bongner Consulting Services staff to manage invoices,
+        company documents, schedules, templates, and client-related resources.
+      </p>
+
+      <div class="portal-grid">
+        <article class="portal-card">
+          <div>
+            <h2>Create Invoice</h2>
+            <p>
+              Access Wave to create, manage, and send Bongner Consulting Services invoices.
+            </p>
+          </div>
+          <a class="portal-button gold" href="https://my.waveapps.com/" target="_blank" rel="noopener">
+            Open Wave
+          </a>
+        </article>
+
+        <article class="portal-card">
+          <div>
+            <h2>Upload Documents</h2>
+            <p>
+              Upload inspection documents, reports, photos, contracts, and company files.
+            </p>
+          </div>
+          <a class="portal-button" href="PASTE_GOOGLE_DRIVE_UPLOAD_FOLDER_LINK_HERE" target="_blank" rel="noopener">
+            Open Document Folder
+          </a>
+        </article>
+
+        <article class="portal-card">
+          <div>
+            <h2>Company Calendar</h2>
+            <p>
+              View scheduled inspections, consulting appointments, deadlines, and meetings.
+            </p>
+          </div>
+          <a class="portal-button" href="PASTE_GOOGLE_CALENDAR_LINK_HERE" target="_blank" rel="noopener">
+            Open Calendar
+          </a>
+        </article>
+
+        <article class="portal-card">
+          <div>
+            <h2>Client Files</h2>
+            <p>
+              Access organized folders for active client documents and project records.
+            </p>
+          </div>
+          <a class="portal-button" href="PASTE_CLIENT_FILES_FOLDER_LINK_HERE" target="_blank" rel="noopener">
+            Open Client Files
+          </a>
+        </article>
+
+        <article class="portal-card">
+          <div>
+            <h2>Company Templates</h2>
+            <p>
+              Use approved templates for reports, letters, proposals, forms, and invoices.
+            </p>
+          </div>
+          <a class="portal-button" href="PASTE_TEMPLATE_FOLDER_LINK_HERE" target="_blank" rel="noopener">
+            Open Templates
+          </a>
+        </article>
+
+        <article class="portal-card">
+          <div>
+            <h2>Internal Notes</h2>
+            <p>
+              View internal instructions, procedures, company notes, and staff resources.
+            </p>
+          </div>
+          <a class="portal-button" href="PASTE_INTERNAL_NOTES_LINK_HERE" target="_blank" rel="noopener">
+            Open Notes
+          </a>
+        </article>
+      </div>
+
+      <div class="notice">
+        <strong>Security reminder:</strong>
+        This portal does not store private files, passwords, or invoice information on the public website.
+        Access is controlled through Wave and Google Drive permissions. Do not share private folder links publicly.
+      </div>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    © 2026 Bongner Consulting Services. Authorized use only.
+  </footer>
+</body>
+</html>
