@@ -7,6 +7,10 @@
   <title>Bongner Consulting Services | Overhead Crane Consulting</title>
   <meta name="description" content="Independent overhead crane consulting, material handling specifications, failure analysis, and expert witness services." />
 
+  <!-- Favicon / app icons -->
+  <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
   <!-- Google Analytics - replace G-XXXXXXXXXX with your real Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
@@ -46,7 +50,7 @@
     }
 
     .industrial-strip {
-      height: 10px;
+      height: 8px;
       background: repeating-linear-gradient(
         135deg,
         var(--gold) 0 18px,
@@ -58,7 +62,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,.96);
+      background: rgba(255,255,255,.97);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(14px);
     }
@@ -66,27 +70,61 @@
     .nav {
       max-width: 1220px;
       margin: auto;
-      padding: 14px 28px;
+      padding: 12px 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 28px;
     }
 
-    .brand-logo {
+    .brand-lockup {
       display: flex;
       align-items: center;
+      gap: 13px;
       text-decoration: none;
+      min-width: 265px;
     }
 
-    .brand-logo img {
-      height: 78px;
-      width: auto;
+    .brand-lockup img {
+      height: 48px;
+      width: 48px;
+      object-fit: contain;
       display: block;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-name {
+      color: var(--navy);
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .92rem;
+    }
+
+    .brand-subtitle {
+      color: var(--gold);
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: .63rem;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 22px;
     }
 
     nav a {
       text-decoration: none;
-      margin-left: 26px;
       font-size: .9rem;
       font-weight: 700;
       color: var(--ink);
@@ -94,6 +132,20 @@
 
     nav a:hover {
       color: var(--gold);
+    }
+
+    .staff-link {
+      color: var(--slate);
+      border: 1px solid var(--line);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: .82rem;
+      background: #ffffff;
+    }
+
+    .staff-link:hover {
+      border-color: var(--gold);
+      color: var(--navy);
     }
 
     .hero {
@@ -128,17 +180,6 @@
       margin: auto;
       padding: 110px 28px;
       width: 100%;
-    }
-
-    .hero-logo {
-      width: 300px;
-      max-width: 85%;
-      margin-bottom: 34px;
-      display: block;
-      background: rgba(255,255,255,.96);
-      padding: 14px;
-      border-radius: 6px;
-      box-shadow: 0 18px 45px rgba(0,0,0,.28);
     }
 
     .eyebrow {
@@ -447,6 +488,64 @@
       text-decoration: underline;
     }
 
+    .portal-section {
+      background:
+        linear-gradient(135deg, #f8f9fb, #eef1f4);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .portal-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      padding: 26px;
+      text-decoration: none;
+      color: var(--ink);
+      box-shadow: 0 14px 34px rgba(16,24,32,.06);
+      transition: all .25s ease;
+      min-height: 160px;
+    }
+
+    .portal-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201,162,77,.65);
+      box-shadow: 0 18px 42px rgba(16,24,32,.1);
+    }
+
+    .portal-card span {
+      display: block;
+      color: var(--gold);
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-size: .72rem;
+      margin-bottom: 12px;
+    }
+
+    .portal-card h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+
+    .portal-card p {
+      color: #53606c;
+      font-size: .94rem;
+    }
+
+    .portal-note {
+      margin-top: 22px;
+      color: #596673;
+      font-size: .92rem;
+      max-width: 860px;
+    }
+
     .contact {
       background: var(--navy);
       color: var(--white);
@@ -525,14 +624,15 @@
       background: #070c12;
       color: #aeb8c2;
       text-align: center;
-      padding: 40px 30px;
+      padding: 42px 30px;
       font-size: .9rem;
     }
 
     .footer-logo {
-      height: 125px;
-      width: auto;
-      margin-bottom: 20px;
+      width: 260px;
+      max-width: 90%;
+      height: auto;
+      margin-bottom: 18px;
       background: #ffffff;
       padding: 10px;
       border-radius: 4px;
@@ -543,25 +643,41 @@
       letter-spacing: .12em;
       text-transform: uppercase;
       color: #aeb8c2;
-      margin-top: 8px;
+      margin: 8px 0 12px;
+    }
+
+    @media (max-width: 1000px) {
+      .nav {
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      .portal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 900px) {
       .nav {
         display: block;
+        padding: 12px 20px;
       }
 
-      .brand-logo img {
-        height: 58px;
+      .brand-lockup img {
+        height: 44px;
+        width: 44px;
       }
 
       nav {
+        justify-content: flex-start;
         margin-top: 14px;
       }
 
       nav a {
         display: inline-block;
-        margin: 8px 16px 0 0;
       }
 
       .section-heading,
@@ -589,12 +705,16 @@
         min-height: auto;
       }
 
-      .hero-logo {
-        width: 240px;
+      .footer-logo {
+        width: 220px;
       }
     }
 
     @media (max-width: 700px) {
+      .portal-grid {
+        grid-template-columns: 1fr;
+      }
+
       .floating-consult {
         right: 16px;
         bottom: 16px;
@@ -602,8 +722,8 @@
         padding: 12px 16px;
       }
 
-      .footer-logo {
-        height: 95px;
+      .brand-lockup {
+        min-width: auto;
       }
     }
   </style>
@@ -615,10 +735,15 @@
 
 <header>
   <div class="nav">
-    <a href="index.html" class="brand-logo">
+    <a href="index.html" class="brand-lockup">
       <img
-        src="assets/img/bongner-logo.png"
-        alt="Bongner Consulting Services Logo">
+        src="assets/img/bongner-logo-shield-mark.png"
+        alt="Bongner Consulting Services logo">
+
+      <span class="brand-text">
+        <span class="brand-name">Bongner</span>
+        <span class="brand-subtitle">Consulting Services</span>
+      </span>
     </a>
 
     <nav>
@@ -628,17 +753,13 @@
       <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
       <a href="https://www.linkedin.com/in/michaelbongner" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="staff-link" href="#employee-portal">Staff Portal</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-inner">
-    <img
-      src="assets/img/bongner-logo.png"
-      alt="Bongner Consulting Services"
-      class="hero-logo">
-
     <div class="eyebrow">Overhead Crane Consulting • Failure Analysis</div>
 
     <h1>Independent expertise for complex material handling systems.</h1>
@@ -903,6 +1024,49 @@
   </div>
 </section>
 
+<section id="employee-portal" class="portal-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Staff Portal</h2>
+      <p>
+        Internal shortcuts for Bongner Consulting Services staff. Access is controlled by the linked services,
+        so keep shared files and business tools permission-protected.
+      </p>
+    </div>
+
+    <div class="portal-grid">
+      <a class="portal-card" href="https://drive.google.com/" target="_blank" rel="noopener">
+        <span>Documents</span>
+        <h3>Google Drive</h3>
+        <p>Upload, organize, and access company documents, templates, and project files.</p>
+      </a>
+
+      <a class="portal-card" href="https://calendar.google.com/" target="_blank" rel="noopener">
+        <span>Calendar</span>
+        <h3>Company Calendar</h3>
+        <p>Review appointments, consultations, deadlines, inspections, and follow-ups.</p>
+      </a>
+
+      <a class="portal-card" href="https://www.waveapps.com/" target="_blank" rel="noopener">
+        <span>Invoices</span>
+        <h3>Wave Accounting</h3>
+        <p>Create, send, and track invoices using the company Wave account.</p>
+      </a>
+
+      <a class="portal-card" href="https://contacts.google.com/" target="_blank" rel="noopener">
+        <span>Contacts</span>
+        <h3>Business Contacts</h3>
+        <p>Access saved business contacts, client information, and professional connections.</p>
+      </a>
+    </div>
+
+    <p class="portal-note">
+      Note: this is a shortcut portal, not a public login system. For privacy, only share Google Drive folders,
+      calendars, and Wave access with approved users.
+    </p>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <div class="container">
     <h2>Start with a focused consultation.</h2>
@@ -927,7 +1091,7 @@
 
 <footer>
   <img
-    src="assets/img/bongner-logo.png"
+    src="assets/img/bongner-logo-primary-no-tagline.png"
     alt="Bongner Consulting Services"
     class="footer-logo">
 
