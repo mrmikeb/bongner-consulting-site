@@ -399,21 +399,19 @@
       margin-bottom: 36px;
       padding: 40px;
       display: grid;
-      grid-template-columns: 72px 1fr;
-      gap: 22px;
-      align-items: start;
+      grid-template-columns: 220px 1fr;
+      gap: 36px;
+      align-items: center;
     }
 
-    .linkedin-avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: var(--ink);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 1.4rem;
+    .profile-photo {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 6px;
+      border: 3px solid rgba(201,162,77,.35);
+      box-shadow: 0 15px 35px rgba(0,0,0,.25);
     }
 
     .leadership-card h3 {
@@ -550,6 +548,14 @@
       .expert-callout,
       .leadership-card {
         grid-template-columns: 1fr;
+      }
+
+      .leadership-card {
+        text-align: center;
+      }
+
+      .profile-photo {
+        margin: auto;
       }
 
       .stat {
@@ -811,15 +817,18 @@
 <section id="credentials" class="dark">
   <div class="container">
     <div class="section-heading">
-      <h2>Industry Experience, Technical Training & Standards Leadership</h2>
+      <h2>Meet Your Consultant</h2>
       <p>
-        37+ years of overhead crane repair, inspection, modernization,
-        installation, management, operation, training, and industry standards experience.
+        Independent overhead crane consultant, expert witness, ASME committee member,
+        and industry trainer with over 37 years of experience.
       </p>
     </div>
 
     <div class="leadership-card">
-      <div class="linkedin-avatar">MB</div>
+      <img
+        src="assets/img/michael-bongner.jpg"
+        alt="Michael Bongner"
+        class="profile-photo">
 
       <div>
         <h3>Michael Bongner</h3>
